@@ -13,12 +13,32 @@ public class HomeController : Controller
         _logger = logger;
     }
 
-    public IActionResult Index()
+        public IActionResult Index()
     {
         return View();
     }
 
     public IActionResult Privacy()
+    {
+        return View();
+    }
+
+    public IActionResult Servicios()
+    {
+        return View();
+    }
+
+    public IActionResult Cursos()
+    {
+        return View();
+    }
+
+    public IActionResult LogIn()
+    {
+        return View();
+    }
+
+    public IActionResult Contacto()
     {
         return View();
     }

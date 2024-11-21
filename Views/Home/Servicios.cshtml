@@ -1,0 +1,95 @@
+
+<link rel="stylesheet" href="/css/servicios.css">
+
+<section>
+    <div style="padding: 40px; font-family: Arial, sans-serif; background-color: #ffffff;">
+        <div style="text-align: center; margin-bottom: 30px;">
+            <h2 style="font-size: 36px; color: #333;">Nuestros servicios</h2>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; max-width: 1200px; margin: 0 auto;">
+            <!-- Servicio 1 -->
+            <div style="background-color: #f9f9f9; padding: 20px; border-radius: 8px; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);">
+                <h3 style="color: #333;">Cursos virtuales</h3>
+                <p style="color: #555; line-height: 1.6;">
+                    Aprende a tu ritmo, desde tu espacio. Nuestros cursos virtuales incluyen experiencias de aprendizaje
+                    inmersivo que te ayudarán a dominar técnicas de defensa personal desde la comodidad de tu hogar u oficina.
+                </p>
+            </div>
+
+            <!-- Servicio 2 -->
+            <div style="background-color: #f9f9f9; padding: 20px; border-radius: 8px; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);">
+                <h3 style="color: #333;">Campos de cursos</h3>
+                <p style="color: #555; line-height: 1.6;">
+                    Nuestros cursos de defensa personal estarán disponibles por sus campos, brindándote la oportunidad de aprender
+                    técnicas y estrategias esenciales de defensa personal presencialmente entre su ubicación o horario.
+                </p>
+            </div>
+
+            <!-- Servicio 3 -->
+            <div style="background-color: #f9f9f9; padding: 20px; border-radius: 8px; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);">
+                <h3 style="color: #333;">Técnicas de autodefensa</h3>
+                <p style="color: #555; line-height: 1.6;">
+                    Nuestras técnicas de autodefensa están diseñadas para ser prácticas y efectivas, proporcionándote las herramientas
+                    necesarias para protegerte a ti y a tus seres queridos en cualquier situación.
+                </p>
+            </div>
+
+            <!-- Servicio 4 -->
+            <div style="background-color: #f9f9f9; padding: 20px; border-radius: 8px; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);">
+                <h3 style="color: #333;">Cursos presenciales</h3>
+                <p style="color: #555; line-height: 1.6;">
+                    Nuestros cursos presenciales brindan aprendizaje práctico y ejercicios específicos de técnicas de defensa personal
+                    en un ambiente seguro y controlado.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+<div class="testimonial-section">
+    <h2 style="text-align:center">Testimonios</h2>
+    <div class="testimonial-container" >
+        
+        <div class="testimonial-content" >
+            <button id="prev-btn" class="nav-btn">⬅️</button>
+            <p style="text-align:center" id="testimonial-text"></p>
+            <button id="next-btn" class="nav-btn">➡️</button>
+        </div>
+        
+    </div>
+</div>
+
+<script>
+    const testimonials = [
+        "Siempre pensé que aprender defensa personal sería complicado, pero las clases del programa\n virtual me demostraron lo contrario. Son súper prácticas y el instructor explica \ntodo de manera clara. Ahora me siento mucho más segura al salir de casa.",
+        "Me inscribí al curso presencial con mi mejor amiga y ha sido una experiencia increíble.\n El profesor es muy profesional y las técnicas que aprendemos son fáciles de aplicar.\n Nos sentimos más preparadas para cualquier situación.",
+        "Lo que más me gustó de las clases virtuales es que puedo aprender a mi ritmo y desde \nla comodidad de mi hogar. Además, los ejercicios están diseñados para todos los niveles, \nincluso para alguien como yo, que nunca había practicado defensa personal.",
+        "Las clases presenciales son muy completas. No solo aprendí técnicas de defensa,\n también mejoré mi confianza y mi forma física. La atención personalizada del instructor hace\n toda la diferencia. ¡Recomiendo el curso a todos!",
+        "Mi hija y yo decidimos tomar el curso juntas, y fue una decisión acertada.\n Las clases virtuales nos permitieron aprender en familia y sentirnos más protegidas.\n El equipo siempre está dispuesto a resolver nuestras dudas, ¡excelente experiencia!"
+    ];
+
+    let currentTestimonialIndex = 0;
+
+    // Manejar el botón "anterior"
+    document.getElementById("prev-btn").addEventListener("click", (event) => {
+        event.preventDefault(); // Evitar el comportamiento por defecto del botón
+        currentTestimonialIndex =
+            (currentTestimonialIndex - 1 + testimonials.length) % testimonials.length;
+        document.getElementById("testimonial-text").innerText = testimonials[currentTestimonialIndex];
+    });
+
+    // Manejar el botón "siguiente"
+    document.getElementById("next-btn").addEventListener("click", (event) => {
+        event.preventDefault(); // Evitar el comportamiento por defecto del botón
+        currentTestimonialIndex =
+            (currentTestimonialIndex + 1) % testimonials.length;
+        document.getElementById("testimonial-text").innerText = testimonials[currentTestimonialIndex];
+    });
+</script>
+        </section>
+
+    </main>
+
+</asp:Content>

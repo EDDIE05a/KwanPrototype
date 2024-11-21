@@ -1,0 +1,52 @@
+/* wwwroot/css/styles.css */
+body {
+    background-color: rgb(148, 147, 147);
+    font-family: 'kanit';
+}
+
+.img
+{
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);   
+}
+
+
+.contenedor1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+    margin: 40px auto;
+    max-width: 1200px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contenedor1 div:first-child {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.contenedor1 h3 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.contenedor1 p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+.contenedor1 img {
+    max-width: 90%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
