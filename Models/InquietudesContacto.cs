@@ -10,6 +10,5 @@ public class InquietudesContacto
 
     public required string titulo { get; set; }
     public required string mensaje { get; set; }
-    
-    
+
 }

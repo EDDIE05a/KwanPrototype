@@ -38,9 +38,10 @@ public class HomeController : Controller
         return View();
     }
 
+
     public IActionResult Contacto()
     {
-        return View();
+        return View("Inquietudes/Contacto");
     }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

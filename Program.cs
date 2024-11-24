@@ -14,7 +14,7 @@ if(string.IsNullOrEmpty(connectionString)){
 
 }
 
-builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseMySQL(connectionString));
+builder.Services.AddDbContext<ApplicationDbContext>( options => options.UseMySQL(connectionString));
 
 var app = builder.Build();
 

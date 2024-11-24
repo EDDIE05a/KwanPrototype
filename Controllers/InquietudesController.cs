@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
+
 public class InquietudesController : Controller
 {
     private readonly ApplicationDbContext _context;
@@ -12,14 +13,14 @@ public class InquietudesController : Controller
 
     [HttpGet]
 
-    public IActionResult Crear(){
+    public IActionResult Contacto(){
         return View();
     }
 
-     [HttpPost]
+    [HttpPost]
 
-     public async Task<IActionResult> Crear(InquietudesContacto inquietudescontacto)
-     {
+    public async Task<IActionResult> Contacto (InquietudesContacto inquietudescontacto)
+    {
         if(ModelState.IsValid){
             _context.Add(inquietudescontacto);
             await _context.SaveChangesAsync();
@@ -27,10 +28,7 @@ public class InquietudesController : Controller
         }
 
         return View(inquietudescontacto);
-     }
-
-    public async Task<IActionResult> Index(InquietudesContacto inquietudescontacto){
-
-        return View(await _context.InquietudesContacto.ToArrayAsync());
     }
+
+
 }
